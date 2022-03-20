@@ -3,6 +3,7 @@ const modal = () => {
     const modalOverlay = document.querySelector('.modal-overlay')
     const modalCallback = document.getElementById('callback')
     const modalClose = document.querySelector('.modal-close')
+    const servicesElements = document.querySelector('.services-elements')
 
     header.addEventListener('click', (e) => {
         e.preventDefault()
@@ -22,6 +23,14 @@ const modal = () => {
     modalClose.addEventListener('click', () => {
         modalOverlay.style.display = 'none'
         modalCallback.style.display = 'none'
+    })
+
+    servicesElements.addEventListener('click', (e) => {
+        e.preventDefault()
+        if (e.target.nextElementSibling.closest('.img-wrapper')) {
+            modalOverlay.style.display = 'block'
+            modalCallback.style.display = 'block'
+        }
     })
 }
 
