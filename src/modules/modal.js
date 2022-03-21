@@ -7,7 +7,6 @@ const modal = () => {
 
     header.addEventListener('click', (e) => {
         e.preventDefault()
-        
         if (e.target.classList.contains('callback-btn')) {
             modalOverlay.style.display = 'block'
             modalCallback.style.display = 'block'
