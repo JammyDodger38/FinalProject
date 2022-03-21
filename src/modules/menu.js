@@ -9,7 +9,6 @@ const menu = () => {
             const section = document.getElementById(id)
             
             if (section) {
-                console.dir(section);
                 section.scrollIntoView({
                     block: "start",
                     behavior: "smooth",

@@ -1,7 +1,6 @@
 const upScroll = () => {
     const upArrow = document.querySelector('.up')
     const servicesBlock = document.querySelector('#services')
-    const headerWrapper = document.querySelector('.header-wrapper')
 
     let timeOut;
 
