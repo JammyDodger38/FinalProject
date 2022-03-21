@@ -5,7 +5,6 @@ const menu = () => {
     links.forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault()
-            console.log(event);
             const id = link.getAttribute('href').substring(1)
             const section = document.getElementById(id)
             

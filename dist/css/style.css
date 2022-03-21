@@ -1241,7 +1241,31 @@ video#video_background {
 /**** /. steps section *****/
 
 /**** services section *****/
+.services-elements {
+	width: 1194px;
+	margin: auto;
+}
 
+.services-carousel {
+	overflow: hidden;
+}
+
+.services-carousel ul {
+	width: 9999px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	transition: margin-left 250ms;
+}
+
+.services-carousel li {
+	display: inline-block;
+}
+
+.carousel__items {
+	width: 378px;
+	transition: transform 0.5s ease;
+}
 
 .services-arrow {
 	display: flex;
