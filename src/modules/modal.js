@@ -5,6 +5,9 @@ const modal = () => {
     const modalClose = document.querySelector('.modal-close')
     const servicesElements = document.querySelector('.services-elements')
 
+    const noService = document.getElementById('noService')
+    const modalNoService = document.querySelector('.modal-callback')
+
     header.addEventListener('click', (e) => {
         e.preventDefault()
         if (e.target.classList.contains('callback-btn')) {
@@ -29,6 +32,14 @@ const modal = () => {
         if (e.target.nextElementSibling.closest('.img-wrapper')) {
             modalOverlay.style.display = 'block'
             modalCallback.style.display = 'block'
+        }
+    })
+
+    noService.addEventListener('click', (e) => {
+        e.preventDefault()
+        if (e.target.classList.contains('button-services')) {
+            modalOverlay.style.display = 'block'
+            modalNoService.style.display = 'block'
         }
     })
 }
