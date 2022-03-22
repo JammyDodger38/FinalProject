@@ -26,9 +26,7 @@ const topSlider = () => {
             startSlide(timeInterval)
         }
     });
-
     
-
     const prevSlide = (elems, index, strClass) => {
         elems[index].classList.remove(strClass)
     }
