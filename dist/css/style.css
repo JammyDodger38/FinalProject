@@ -1002,6 +1002,9 @@ hr.white {
 	overflow: hidden;
 	height: 450px;
 	position: relative;
+	opacity: 0;
+	-webkit-transition: opacity .5s;
+	transition: opacity .5s
 }
 
 .top-slider .item:before {
@@ -1089,7 +1092,9 @@ video#video_background {
 		height: 520px;
 	}
 
-	.top-slider .table {
+	.top-slider .item {
+		position: absolute;
+		width: 100%;
 		opacity: 0;
 		visibility: hidden;
 		-webkit-transform: scale(1.5);
@@ -1101,13 +1106,51 @@ video#video_background {
 		transition: 0.5s;
 	}
 
-	.top-slider .table.active {
+	.top-slider .item.active {
 		webkit-transform: scale(1);
 		-ms-transform: scale(1);
 		-o-transform: scale(1);
 		transform: scale(1);
 		opacity: 1;
 		visibility: visible;
+	}
+
+	.top-slider-dots {
+		position: absolute;
+		bottom: 20px;
+		width: 100%;
+		margin: 20px auto 0;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-pack: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+		z-index: 50
+	}
+
+	.top-slider-dots .dot {
+		cursor: pointer;
+		height: 16px;
+		width: 16px;
+		margin: 0 10px;
+		border-radius: 50%;
+		border: solid #fff;
+		display: inline-block;
+		-webkit-transition: background-color, -webkit-transform .4s;
+		transition: background-color, transform .4s, -webkit-transform .4s
+	}
+
+	.top-slider-dots .dot-active {
+		background-color: #19b5fe;
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2)
+	}
+
+	.top-slider-dots .dot:hover {
+		background-color: #53c6fe;
+		-webkit-transform: scale(1.2);
+		transform: scale(1.2)
 	}
 }
 
