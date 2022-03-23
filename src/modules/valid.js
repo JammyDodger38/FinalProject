@@ -18,7 +18,7 @@ const valid = () => {
     })
 
     userPhone.addEventListener('input', (e) => {
-        e.target.value = e.target.value.replace(/[^0-9\(\)\-\+]+/g, "")
+        e.target.value = e.target.value.replace(/[^0-9\+]+/g, "")
     })
     userPhone.addEventListener('blur', (e) => {
         blurInput(e)
