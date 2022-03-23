@@ -7,8 +7,7 @@ const burger = () => {
     })
 
     document.addEventListener('click', (e) => {
-        e.preventDefault()
-
+        
         if (!(e.target.closest('.mobile-menu') || e.target.closest('.mob-menu-btn')) || e.target.closest('.mobile-menu-close')) {
             mobileMenu.style.right = '-400px'
         }

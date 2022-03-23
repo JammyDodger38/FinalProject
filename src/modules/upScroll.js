@@ -23,8 +23,6 @@ const upScroll = () => {
     })
 
     document.addEventListener('click', (e) => {
-        e.preventDefault()
-
         if (e.target.closest('.up')) {
             goUp()
         }
