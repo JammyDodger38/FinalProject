@@ -53,6 +53,10 @@ const sendForm = async () => {
             statusBlock.textContent = errorText
             alert('Данные не валидны')
         }
+
+        setTimeout(() => {
+            statusBlock.textContent = ''
+        }, 3000)
     }
 
     try {
