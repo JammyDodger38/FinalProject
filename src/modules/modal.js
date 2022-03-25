@@ -6,7 +6,8 @@ const modal = () => {
     const servicesElements = document.querySelector('.services-elements')
 
     const noService = document.getElementById('noService')
-    const modalNoService = document.querySelector('.modal-callback')
+
+    const mobileMenu = document.querySelector('.mobile-menu')
 
     header.addEventListener('click', (e) => {
         e.preventDefault()
@@ -39,7 +40,14 @@ const modal = () => {
         e.preventDefault()
         if (e.target.classList.contains('button-services')) {
             modalOverlay.style.display = 'block'
-            modalNoService.style.display = 'block'
+            modalCallback.style.display = 'block'
+        }
+    })
+
+    mobileMenu.addEventListener('click', (e) => {
+        if (e.target.closest('.callback-btn')) {
+            modalOverlay.style.display = 'block'
+            modalCallback.style.display = 'block'
         }
     })
 }

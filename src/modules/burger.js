@@ -8,7 +8,7 @@ const burger = () => {
 
     document.addEventListener('click', (e) => {
         
-        if (!(e.target.closest('.mobile-menu') || e.target.closest('.mob-menu-btn')) || e.target.closest('.mobile-menu-close')) {
+        if (!(e.target.closest('.mobile-menu') || e.target.closest('.mob-menu-btn')) || e.target.closest('.mobile-menu-close') || e.target.closest('.callback-btn')) {
             mobileMenu.style.right = '-400px'
         }
     })
